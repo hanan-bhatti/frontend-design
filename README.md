@@ -15,7 +15,13 @@ This repository is designed to be used with **Claude Code**, **GitHub Copilot CL
 
 ## 🚀 Quick Installation
 
-Run the interactive installer to select your agents and setup the skill:
+**Option 1: One-Line Curl (Recommended)**
+```bash
+curl -sSL https://raw.githubusercontent.com/hanan-bhatti/frontend-design/main/install.sh | bash
+```
+
+**Option 2: Local Script**
+Run the interactive installer after cloning:
 ```bash
 ./install.sh
 ```
