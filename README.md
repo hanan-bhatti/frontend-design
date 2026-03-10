@@ -13,23 +13,24 @@ A comprehensive collection of 30+ distinctive aesthetic themes and a production-
 
 This repository is designed to be used with **Claude Code**, **GitHub Copilot CLI**, or **Codex**.
 
-### Installation (Claude Code)
+## 🚀 Quick Installation
+
+Run the interactive installer to select your agents and setup the skill:
+```bash
+./install.sh
+```
+
+### Installation (Claude Code One-Liner)
+```bash
+claude skill install github.com/hanan-bhatti/frontend-design
+```
+
+### Manual Installation
 Clone this repo and link the skill to your local Claude configuration:
 ```bash
 git clone https://github.com/hanan-bhatti/frontend-design.git
 cd frontend-design
 ln -sf $(pwd)/skill ~/.claude/skills/frontend-design-master
-```
-
-### Usage Examples
-Trigger the design intelligence by describing your intent:
-- "Create a landing page in the **Neo-Brutalism** style."
-- "Apply the **Swiss Minimalist** theme to this dashboard."
-- "Audit my UI components for **UX Psychology** compliance."
-
-## 🚀 One-Line Installation
-```bash
-claude skill install github.com/hanan-bhatti/frontend-design
 ```
 
 ## 🎨 Included Themes
