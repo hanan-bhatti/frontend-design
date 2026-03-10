@@ -1,0 +1,22 @@
+{
+  "name": "frontend-design-master",
+  "description": "Orchestrates high-craft frontend UI generation using 30+ distinctive aesthetic themes and the 21 Laws of UX.",
+  "version": "1.0.0",
+  "author": "Hanan Bhatti",
+  "repository": "https://github.com/hanan-bhatti/frontend-design",
+  "triggers": [
+    "design UI",
+    "create web layout",
+    "styling components",
+    "apply aesthetics",
+    "audit user experience"
+  ],
+  "references": [
+    "references/laws-of-ux.md",
+    "references/ux-psychology.md",
+    "references/color-system.md",
+    "references/typography-system.md",
+    "references/visual-effects.md",
+    "references/animation-guide.md"
+  ]
+}

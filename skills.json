@@ -1,0 +1,25 @@
+[
+  {
+    "name": "frontend-design-master",
+    "description": "Orchestrates high-craft frontend UI generation using 30+ distinctive aesthetic themes and the 21 Laws of UX.",
+    "path": "skill/SKILL.md",
+    "triggers": [
+      "design UI",
+      "create web layout",
+      "styling components",
+      "apply aesthetics",
+      "audit user experience"
+    ]
+  },
+  {
+    "name": "skill-creator",
+    "description": "Create new skills, modify and improve existing skills, and measure skill performance.",
+    "path": "skill-creator/SKILL.md",
+    "triggers": [
+      "create skill",
+      "improve skill",
+      "optimize skill",
+      "benchmark skill"
+    ]
+  }
+]

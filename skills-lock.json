@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-creator": {
+      "source": "hanan-bhatti/frontend-design",
+      "sourceType": "github",
+      "path": "skill-creator"
+    },
+    "frontend-design-master": {
+      "source": "hanan-bhatti/frontend-design",
+      "sourceType": "github",
+      "path": "skill"
+    }
+  }
+}
