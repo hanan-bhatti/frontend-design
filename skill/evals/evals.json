@@ -1,0 +1,23 @@
+{
+  "skill_name": "frontend-design-master",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to design a pricing page for a new B2B cybersecurity tool. What style should I use and how should it look? Give me the HTML/CSS.",
+      "expected_output": "The agent should ask clarifying questions if needed, select a serious/trustworthy theme (like Enterprise or Modern Dark), apply UX laws (like Von Restorff for the primary pricing tier), and generate semantic, production-ready code.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Refactor this existing login component to use the Neo-Brutalism theme. Make sure it's accessible.",
+      "expected_output": "The agent should load the Neo-Brutalism XML theme, apply sharp borders, high contrast colors, and hard shadows. It must also ensure WCAG AA contrast and proper focus states.",
+      "files": ["login.html"]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you audit my current landing page layout? I feel like users are getting confused by the number of options.",
+      "expected_output": "The agent should load `ux-psychology.md` and `laws-of-ux.md`, specifically citing Hick's Law and Miller's Law, and provide a structured critique using the `laws_auditor.py` script approach.",
+      "files": []
+    }
+  ]
+}

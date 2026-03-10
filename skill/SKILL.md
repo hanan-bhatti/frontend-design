@@ -1,96 +1,58 @@
-# Frontend Design Master (Unified Pro)
-
-A high-performance design orchestrator that eliminates generic UI by enforcing distinctive aesthetics, rigorous UX psychology, and technical excellence.
-
-## 🎯 Selective Reading Rule (MANDATORY)
-
-**Read REQUIRED files always, OPTIONAL only when needed:**
-
-| File | Status | When to Read |
-|------|--------|--------------|
-| [ux-psychology.md](references/ux-psychology.md) | 🔴 **REQUIRED** | Always read first! |
-| [laws-of-ux.md](references/laws-of-ux.md) | 🔴 **REQUIRED** | Comprehensive UX Laws! |
-| [color-system.md](references/color-system.md) | ⚪ Optional | Color/palette decisions |
-| [typography-system.md](references/typography-system.md) | ⚪ Optional | Font selection/pairing |
-| [visual-effects.md](references/visual-effects.md) | ⚪ Optional | Glassmorphism, shadows, gradients |
-| [animation-guide.md](references/animation-guide.md) | ⚪ Optional | Animation needed |
-| [motion-graphics.md](references/motion-graphics.md) | ⚪ Optional | Lottie, GSAP, 3D |
-| [decision-trees.md](references/decision-trees.md) | ⚪ Optional | Context templates |
-
-## ⚠️ CRITICAL: ASK BEFORE ASSUMING (MANDATORY)
-
-> **STOP! If the user's request is open-ended, DO NOT default to safe patterns.**
-
-| AI Default Tendency | Why It's Bad | Think Instead |
-|---------------------|--------------|---------------|
-| **Bento Grids** | Overused cliché | Why does this NEED a grid? |
-| **Hero Split** | Predictable | Massive Typography or Vertical Narrative? |
-| **Mesh Gradients** | Lazy background | Radical color pairing? |
-| **Fintech Blue** | Safe harbor | Red, Black, or Neon Green? |
-| **Rounded corners** | Generic | Sharp, brutalist edges? |
-
-## 1. Design Intelligence Categories
-
-| Priority | Category | Impact | Domain |
-|----------|----------|--------|--------|
-| 1 | Accessibility | CRITICAL | `ux` |
-| 2 | Interaction | CRITICAL | `ux` |
-| 3 | Performance | HIGH | `ux` |
-| 4 | Layout | HIGH | `ux` |
-| 5 | Style/Color | MEDIUM | `style`, `color` |
-
-## 2. Aesthetic Themes Library (30+)
-
-Trigger by name or use the internal search script:
-
-| Monochrome | Bauhaus | Modern Dark | Newsprint | SaaS Modern |
-|---|---|---|---|---|
-| Luxury | Terminal | Swiss Minimalist | Kinetic | Flat Design |
-| Art Deco | Material Design | Neo-Brutalism | Bold Typography | Academia |
-| Cyberpunk | Web3 | Playful Geometric | Minimal Dark | Claymorphism |
-| Professional | Botanical | Vaporwave | Enterprise | Sketch |
-| Industrial | Neumorphism | Organic | Maximalism | Retro |
-
-## 3. Design Feasibility & Impact Index (DFII)
-
-Evaluate direction before execution (Score -5 to +15):
-`DFII = (Impact + Fit + Feasibility + Performance) − Consistency Risk`
-
-- **12–15**: Excellent - Execute fully.
-- **8–11**: Strong - Proceed with discipline.
-- **≤ 3**: Weak - Rethink aesthetic direction.
-
-## 4. Execution Workflow
-
-### Step 1: Analyze Constraints
-Identify Product Type, Tone, Audience, and Stack. **ASK** if vague.
-
-### Step 2: Generate Design System
-Use the `--design-system` pattern to define Patterns, Styles, Colors, and Typography. Avoid AI safe-harbors.
-
-### Step 3: Implementation
-- **Typography**: 1 expressive display font + 1 restrained body font.
-- **Color**: 60-30-10 distribution using CSS variables.
-- **Motion**: Purposeful entrance sequences (transform/opacity).
-- **Code**: Semantic HTML, Accessible (WCAG AA), Performance-optimized.
-
-## 5. Runtime Scripts & Tools
-
-| Script | Purpose | Usage |
-|--------|---------|-------|
-| `search.py` | Design System Search | `python3 scripts/search.py "keywords" --design-system` |
-| `ux_audit.py` | UX/A11y Audit | `python3 scripts/ux_audit.py <path>` |
-| `ux_laws_lookup.py` | 21 Laws Reference | `python3 scripts/ux_laws_lookup.py <law_name>` |
-| `laws_auditor.py` | Specific Laws Audit | `python3 scripts/laws_auditor.py <path>` |
-
-## 6. Integration Rules
-
-- **Iconography**: No emojis. Use SVG (Lucide/Heroicons) exclusively.
-- **Hover**: Stable states, no layout shifts.
-- **Touch**: 44x44px minimum targets.
-- **Spacing**: 8-point grid rhythm.
-
 ---
-**License**: MIT
-**Author**: Hanan Bhatti
-**Version**: 1.0.0
+name: frontend-design-master
+description: Orchestrates high-craft frontend UI generation using 30+ distinctive aesthetic themes and the 21 Laws of UX. Make sure to use this skill whenever the user mentions designing UIs, creating web layouts, styling components, applying aesthetics (like Cyberpunk, Brutalism, Minimalist), or auditing user experience, even if they don't explicitly ask for a 'design system'.
+---
+
+# Frontend Design Master
+
+A high-performance design orchestrator that eliminates generic "AI UI" by enforcing distinctive aesthetics, rigorous UX psychology, and technical excellence.
+
+## Core Philosophy & Mandates
+
+Your goal is to create memorable, high-craft interfaces. 
+1. **Never Assume Safe Defaults**: Do not default to bento grids, hero splits, or mesh gradients unless explicitly justified by the brand or user.
+2. **Enforce Intentional Aesthetics**: Every design must follow a named, explicit stance (e.g., *Neo-Brutalism*, *SaaS Modern*, *Cyberpunk*).
+3. **Apply UX Psychology**: Design decisions must be backed by the 21 Laws of UX (Hick's Law, Fitts' Law, Gestalt principles).
+4. **Deliver Production Code**: Output working HTML/CSS/JS or framework code (React/Tailwind), not just visual mockups. Ensure WCAG AA accessibility.
+
+## Progressive Disclosure: When to Read References
+
+Do not read all reference files at once. Read them only when the context demands it:
+
+- `references/laws-of-ux.md` - **REQUIRED**: Read this if you need to justify layout decisions or perform a UX audit.
+- `references/ux-psychology.md` - **REQUIRED**: Read this for deep psychological behavioral patterns and trust-building systems.
+- `references/color-system.md` - Read when defining palettes (60-30-10 rule) or calculating dark mode contrast.
+- `references/typography-system.md` - Read when establishing modular font scales or pairings.
+- `references/visual-effects.md` - Read when applying glassmorphism, shadows, or gradients.
+- `references/animation-guide.md` - Read when implementing transition timings and micro-interactions.
+
+## Execution Workflow
+
+### Step 1: Constraint Analysis
+Identify the Product Type, Tone, Audience, and Tech Stack. 
+If the user's request is vague, **ASK** before assuming:
+- "What color palette do you prefer?"
+- "What specific style are you going for (minimal, retro, corporate)?"
+
+### Step 2: Theme Selection
+Select or ask the user to choose from the 30+ available aesthetic themes located in the `data/` directory (e.g., `data/13_neo_brutalism.xml`). Use the `read_file` tool to ingest the specific XML theme constraints before writing code.
+
+### Step 3: Implement Design System
+Establish the base tokens:
+- **Typography**: 1 expressive display font + 1 restrained body font.
+- **Color**: Implement the 60-30-10 rule using CSS variables.
+- **Spacing**: Use an 8-point grid system.
+
+### Step 4: Code Generation
+Output the requested components adhering to the selected theme and UX laws. 
+- Use SVG icons (Lucide/Heroicons) — NEVER use emojis for UI elements.
+- Ensure minimum 44x44px touch targets (Fitts' Law).
+- Minimize choices to reduce decision fatigue (Hick's Law).
+
+## Runtime Scripts
+
+Use these scripts to validate your work or assist the user:
+
+- **UX Laws Lookup**: `python3 scripts/ux_laws_lookup.py [law_name]`
+- **Project UX Audit**: `python3 scripts/laws_auditor.py .`
+- **Full UX/A11y Audit**: `python3 scripts/ux_audit.py <path>`
