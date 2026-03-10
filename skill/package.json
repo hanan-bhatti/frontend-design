@@ -1,0 +1,24 @@
+{
+  "name": "@your-username/frontend-design-master",
+  "version": "1.0.0",
+  "description": "Unified Frontend Design Master skill with 30+ themes and 21 Laws of UX.",
+  "main": "SKILL.md",
+  "bin": {
+    "ux-audit": "scripts/ux_audit.py",
+    "ux-lookup": "scripts/ux_laws_lookup.py"
+  },
+  "keywords": [
+    "claude-code",
+    "ai-skill",
+    "frontend",
+    "design",
+    "ux",
+    "ui"
+  ],
+  "author": "Hanan Bhatti",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/frontend-design-master.git"
+  }
+}
