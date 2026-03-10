@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+*.log
+__pycache__/
+.env
+.gemini/
+.claude/
+.codex/
+.github/
+!skill/
+!data/
+!examples/
+!references/
+!scripts/
