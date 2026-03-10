@@ -1,57 +1,45 @@
-# Frontend Design Master - Skill Repository
+# Frontend Design Master (Unified Pro)
 
-A comprehensive collection of 30+ distinctive aesthetic themes and a production-grade AI skill for frontend design orchestration.
+A high-performance frontend design orchestrator synthesized from `ui-ux-pro-max`, `frontend-design`, and a curated library of 30+ aesthetic themes.
 
-## 📦 What's Inside
+## Features
 
-- **`skill/`**: The core **Frontend Design Master** skill. It combines the intelligence of `ui-ux-pro-max` with all 21 Laws of UX and curated themes.
-- **`data/`**: 30+ XML export files containing detailed prompts for various design aesthetics.
-- **`references/`**: Comprehensive guides on animation, color systems, typography, and all 21 Laws of UX.
-- **`scripts/`**: Python utilities for design system searching and UX auditing.
+- **Unified Intelligence**: Merges priority-based UX rules with deep behavioral psychology.
+- **21 Laws of UX**: Comprehensive support for all major UX laws (Gestalt, Cognitive Bias, Heuristics).
+- **30+ Aesthetic Themes**: Instant access to distinctive styles (Neo-Brutalism, Cyberpunk, SaaS Modern, etc.).
+- **Production-Ready**: Generates functional, accessible (WCAG AA), and performant code.
+- **Decision-Driven**: Enforces the "Ask Before Assuming" mandate to prevent generic AI UI output.
+- **Integrated Tooling**: Includes scripts for design system searching and UX auditing.
 
-## 🚀 How to Use the Skill
+## Installation
 
-This repository is designed to be used with **Claude Code**, **GitHub Copilot CLI**, or **Codex**.
+### Local
+Copy the `frontend-design-master` directory to your `.claude/skills/` or `.github/skills/` folder.
 
-## 🚀 Quick Installation
-
-**Option 1: One-Line Curl (Recommended)**
+### Global (via symlink)
 ```bash
-curl -sSL https://raw.githubusercontent.com/hanan-bhatti/frontend-design/main/install.sh | bash
+ln -sf $(pwd)/.claude/skills/frontend-design-master ~/.claude/skills/frontend-design-master
 ```
 
-**Option 2: Skills CLI (npx)**
-```bash
-npx skills add https://github.com/hanan-bhatti/frontend-design --skill frontend-design
-```
-
-**Option 3: Local Script**
-Run the interactive installer after cloning:
-```bash
-./install.sh
-```
-
-### Installation (Claude Code One-Liner)
+### One-Line Installation (Claude Code)
 ```bash
 claude skill install github.com/hanan-bhatti/frontend-design
 ```
 
-### Manual Installation
-Clone this repo and link the skill to your local Claude configuration:
-```bash
-git clone https://github.com/hanan-bhatti/frontend-design.git
-cd frontend-design
-ln -sf $(pwd)/skill ~/.claude/skills/frontend-design-master
-```
+## Usage
 
-## 🎨 Included Themes
-| Monochrome | Bauhaus | Modern Dark | Newsprint | SaaS Modern |
-|---|---|---|---|---|
-| Luxury | Terminal | Swiss Minimalist | Kinetic | Flat Design |
-| Art Deco | Material Design | Neo-Brutalism | Bold Typography | Academia |
-| Cyberpunk | Web3 | Playful Geometric | Minimal Dark | Claymorphism |
-| Professional | Botanical | Vaporwave | Enterprise | Sketch |
-| Industrial | Neumorphism | Organic | Maximalism | Retro |
+Trigger by requesting a design task or specific theme:
+- "Design a **Bauhaus** inspired dashboard for a data platform."
+- "Audit this UI for **UX Psychology** compliance."
+- "Apply the **Neo-Brutalism** theme to my component library."
 
-## 📜 License
-MIT License - See the `LICENSE` file for details.
+## Project Structure
+
+- `SKILL.md`: Core logic, theme library, and execution mandates.
+- `LICENSE`: MIT License.
+- `references/`: Deep-dive guides on animation, color, typography, and psychology.
+- `scripts/`: Python utilities for searching and auditing.
+- `examples/`: Theme-specific implementation samples.
+
+## License
+MIT - Created by Hanan Bhatti (2026)
