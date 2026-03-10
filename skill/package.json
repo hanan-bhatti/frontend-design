@@ -1,5 +1,5 @@
 {
-  "name": "@your-username/frontend-design-master",
+  "name": "@hanan-bhatti/frontend-design-master",
   "version": "1.0.0",
   "description": "Unified Frontend Design Master skill with 30+ themes and 21 Laws of UX.",
   "main": "SKILL.md",
@@ -19,6 +19,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/frontend-design-master.git"
-  }
+    "url": "git+https://github.com/hanan-bhatti/frontend-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanan-bhatti/frontend-design/issues"
+  },
+  "homepage": "https://github.com/hanan-bhatti/frontend-design#readme"
 }

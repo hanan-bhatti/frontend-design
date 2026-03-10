@@ -21,6 +21,11 @@ Copy the `frontend-design-master` directory to your `.claude/skills/` or `.githu
 ln -sf $(pwd)/.claude/skills/frontend-design-master ~/.claude/skills/frontend-design-master
 ```
 
+### One-Line Installation (Claude Code)
+```bash
+claude skill install github.com/hanan-bhatti/frontend-design
+```
+
 ## Usage
 
 Trigger by requesting a design task or specific theme:

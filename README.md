@@ -16,6 +16,8 @@ This repository is designed to be used with **Claude Code**, **GitHub Copilot CL
 ### Installation (Claude Code)
 Clone this repo and link the skill to your local Claude configuration:
 ```bash
+git clone https://github.com/hanan-bhatti/frontend-design.git
+cd frontend-design
 ln -sf $(pwd)/skill ~/.claude/skills/frontend-design-master
 ```
 
@@ -24,6 +26,11 @@ Trigger the design intelligence by describing your intent:
 - "Create a landing page in the **Neo-Brutalism** style."
 - "Apply the **Swiss Minimalist** theme to this dashboard."
 - "Audit my UI components for **UX Psychology** compliance."
+
+## 🚀 One-Line Installation
+```bash
+claude skill install github.com/hanan-bhatti/frontend-design
+```
 
 ## 🎨 Included Themes
 | Monochrome | Bauhaus | Modern Dark | Newsprint | SaaS Modern |
