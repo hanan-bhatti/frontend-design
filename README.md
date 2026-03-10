@@ -20,7 +20,12 @@ This repository is designed to be used with **Claude Code**, **GitHub Copilot CL
 curl -sSL https://raw.githubusercontent.com/hanan-bhatti/frontend-design/main/install.sh | bash
 ```
 
-**Option 2: Local Script**
+**Option 2: Skills CLI (npx)**
+```bash
+npx skills add https://github.com/hanan-bhatti/frontend-design --skill frontend-design
+```
+
+**Option 3: Local Script**
 Run the interactive installer after cloning:
 ```bash
 ./install.sh
