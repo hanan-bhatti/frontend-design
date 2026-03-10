@@ -5,6 +5,7 @@ A high-performance frontend design orchestrator synthesized from `ui-ux-pro-max`
 ## Features
 
 - **Unified Intelligence**: Merges priority-based UX rules with deep behavioral psychology.
+- **21 Laws of UX**: Comprehensive support for all major UX laws (Gestalt, Cognitive Bias, Heuristics).
 - **30+ Aesthetic Themes**: Instant access to distinctive styles (Neo-Brutalism, Cyberpunk, SaaS Modern, etc.).
 - **Production-Ready**: Generates functional, accessible (WCAG AA), and performant code.
 - **Decision-Driven**: Enforces the "Ask Before Assuming" mandate to prevent generic AI UI output.

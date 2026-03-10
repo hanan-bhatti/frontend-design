@@ -4,9 +4,9 @@ A comprehensive collection of 30+ distinctive aesthetic themes and a production-
 
 ## 📦 What's Inside
 
-- **`skill/`**: The core **Frontend Design Master** skill. It combines the intelligence of `ui-ux-pro-max` with deep UX psychology and curated themes.
-- **`data/`**: 30+ XML export files containing detailed prompts for various design aesthetics (Cyberpunk, Neo-Brutalism, SaaS, etc.).
-- **`references/`**: Comprehensive guides on animation, color systems, typography, and UX psychology.
+- **`skill/`**: The core **Frontend Design Master** skill. It combines the intelligence of `ui-ux-pro-max` with all 21 Laws of UX and curated themes.
+- **`data/`**: 30+ XML export files containing detailed prompts for various design aesthetics.
+- **`references/`**: Comprehensive guides on animation, color systems, typography, and all 21 Laws of UX.
 - **`scripts/`**: Python utilities for design system searching and UX auditing.
 
 ## 🚀 How to Use the Skill

@@ -9,6 +9,7 @@ A high-performance design orchestrator that eliminates generic UI by enforcing d
 | File | Status | When to Read |
 |------|--------|--------------|
 | [ux-psychology.md](references/ux-psychology.md) | 🔴 **REQUIRED** | Always read first! |
+| [laws-of-ux.md](references/laws-of-ux.md) | 🔴 **REQUIRED** | Comprehensive UX Laws! |
 | [color-system.md](references/color-system.md) | ⚪ Optional | Color/palette decisions |
 | [typography-system.md](references/typography-system.md) | ⚪ Optional | Font selection/pairing |
 | [visual-effects.md](references/visual-effects.md) | ⚪ Optional | Glassmorphism, shadows, gradients |
@@ -79,6 +80,8 @@ Use the `--design-system` pattern to define Patterns, Styles, Colors, and Typogr
 |--------|---------|-------|
 | `search.py` | Design System Search | `python3 scripts/search.py "keywords" --design-system` |
 | `ux_audit.py` | UX/A11y Audit | `python3 scripts/ux_audit.py <path>` |
+| `ux_laws_lookup.py` | 21 Laws Reference | `python3 scripts/ux_laws_lookup.py <law_name>` |
+| `laws_auditor.py` | Specific Laws Audit | `python3 scripts/laws_auditor.py <path>` |
 
 ## 6. Integration Rules
 
