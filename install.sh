@@ -13,17 +13,33 @@ echo -e "${BLUE}==========================================${NC}"
 echo -e "${BLUE}   🎨 Frontend Design Master Installer    ${NC}"
 echo -e "${BLUE}==========================================${NC}"
 
+# Detect if we are running remotely or locally
+REPO_URL="https://github.com/hanan-bhatti/frontend-design.git"
+TEMP_DIR="/tmp/frontend-design-install-$(date +%s)"
+
+if [[ ! -d "./skill" ]]; then
+    echo -e "${YELLOW}Skill folder not found. Downloading repository to temporary folder...${NC}"
+    if ! command -v git &> /dev/null; then
+        echo -e "${RED}Error: git is not installed. Please install git first.${NC}"
+        exit 1
+    fi
+    git clone --depth 1 "$REPO_URL" "$TEMP_DIR" &> /dev/null
+    cd "$TEMP_DIR" || exit 1
+fi
+
 # 1. Select Agents (Top AI Agents)
 echo -e "\n${YELLOW}Step 1: Select your AI Agents (Space to select, Enter to confirm)${NC}"
 AGENTS=("Claude Code" "GitHub Copilot CLI" "Codex" "Cursor" "Windsurf" "Aider" "Continue" "Supermaven")
 SELECTED_AGENTS=()
 
-# Basic multi-select implementation for bash
 for i in "${!AGENTS[@]}"; do
     echo "$((i+1))) ${AGENTS[$i]}"
 done
 
-read -p "Enter numbers separated by space (e.g., 1 2): " choices
+# Read from /dev/tty to avoid consuming the script when piped
+printf "Enter numbers separated by space (e.g., 1 2): "
+read -r choices < /dev/tty
+
 for choice in $choices; do
     index=$((choice-1))
     if [[ $index -ge 0 && $index -lt ${#AGENTS[@]} ]]; then
@@ -42,7 +58,8 @@ echo -e "${GREEN}Selected: ${SELECTED_AGENTS[*]}${NC}"
 echo -e "\n${YELLOW}Step 2: Select Installation Type${NC}"
 echo "1) Symlink (Recommended - updates automatically with git pull)"
 echo "2) Copy (Standalone - static version)"
-read -p "Selection (1/2): " LINK_TYPE_CHOICE
+printf "Selection (1/2): "
+read -r LINK_TYPE_CHOICE < /dev/tty
 
 INSTALL_CMD="ln -sf"
 [[ "$LINK_TYPE_CHOICE" == "2" ]] && INSTALL_CMD="cp -r"
@@ -51,41 +68,58 @@ INSTALL_CMD="ln -sf"
 echo -e "\n${YELLOW}Step 3: Select Scope${NC}"
 echo "1) Global (Available for all projects)"
 echo "2) Project (Local to this directory only)"
-read -p "Selection (1/2): " SCOPE_CHOICE
+printf "Selection (1/2): "
+read -r SCOPE_CHOICE < /dev/tty
 
-# 4. Define Skill Name & Check for Conflicts
+# 4. Define Skill Name
 DEFAULT_NAME="frontend-design-master"
 echo -e "\n${YELLOW}Step 4: Naming${NC}"
-read -p "Enter skill name [$DEFAULT_NAME]: " SKILL_NAME
+printf "Enter skill name [$DEFAULT_NAME]: "
+read -r SKILL_NAME < /dev/tty
 SKILL_NAME=${SKILL_NAME:-$DEFAULT_NAME}
 
 # Function to perform installation
 install_skill() {
     local platform_path=$1
     local name=$2
+    local source_path="$(pwd)/skill"
     
-    # Ensure the parent directory exists without deleting it
-    mkdir -p "$platform_path"
-
-    if [[ -d "$platform_path/$name" ]] || [[ -L "$platform_path/$name" ]]; then
-        echo -e "${YELLOW}Notice: '$name' already exists in $platform_path${NC}"
-        read -p "Overwrite existing? (y/n) [n]: " do_overwrite
-        if [[ "$do_overwrite" != "y" ]]; then
-            name="${name}-$(date +%s)"
-            echo -e "${BLUE}Installing as unique name: $name${NC}"
+    # Handle Global vs Project Path Expansion
+    if [[ "$platform_path" == /* ]]; then
+        # Global path - ensure it's absolute
+        dest_parent="$platform_path"
+    else
+        # Project path - relative to where the command was run
+        # If we are in a temp dir, project scope must be relative to the ORIGINAL directory
+        if [[ -d "$TEMP_DIR" ]]; then
+            dest_parent="$OLDPWD/$platform_path"
+        else
+            dest_parent="$platform_path"
         fi
     fi
 
-    # Perform installation
-    $INSTALL_CMD "$(pwd)/skill" "$platform_path/$name"
-    echo -e "${GREEN}Successfully installed '$name' to $platform_path${NC}"
+    mkdir -p "$dest_parent"
+
+    if [[ -d "$dest_parent/$name" ]] || [[ -L "$dest_parent/$name" ]]; then
+        echo -e "${YELLOW}Notice: '$name' already exists in $dest_parent${NC}"
+        printf "Overwrite existing? (y/n) [n]: "
+        read -r do_overwrite < /dev/tty
+        if [[ "$do_overwrite" != "y" ]]; then
+            name="${name}-$(date +%s)"
+            echo -e "${BLUE}Installing as unique name: $name${NC}"
+        else
+            rm -rf "$dest_parent/$name"
+        fi
+    fi
+
+    $INSTALL_CMD "$source_path" "$dest_parent/$name"
+    echo -e "${GREEN}Successfully installed '$name' to $dest_parent${NC}"
 }
 
-# Execute installation based on selections
+# Execute installation
 for agent in "${SELECTED_AGENTS[@]}"; do
     case $agent in
         "Claude Code")
-            # Added .agents and .agent support
             GLOBAL_PATHS=("$HOME/.claude/skills" "$HOME/.agents" "$HOME/.agent")
             PROJECT_PATHS=(".claude/skills" ".agents" ".agent")
             ;;
@@ -98,7 +132,6 @@ for agent in "${SELECTED_AGENTS[@]}"; do
             PROJECT_PATHS=(".codex/skills" ".agents")
             ;;
         *)
-            echo -e "${YELLOW}Standard paths for $agent may vary.${NC}"
             GLOBAL_PATHS=("$HOME/.agents" "$HOME/.agent")
             PROJECT_PATHS=(".agents" ".agent")
             ;;
@@ -115,5 +148,11 @@ for agent in "${SELECTED_AGENTS[@]}"; do
     fi
 done
 
+# Cleanup if we cloned to a temp dir
+if [[ -d "$TEMP_DIR" ]]; then
+    echo -e "\n${YELLOW}Cleaning up temporary files...${NC}"
+    rm -rf "$TEMP_DIR"
+fi
+
 echo -e "\n${GREEN}Installation Complete! 🎉${NC}"
-echo -e "Note: Your existing skills in these folders have been preserved."
+echo -e "You can now use the skill in your selected AI agents."
